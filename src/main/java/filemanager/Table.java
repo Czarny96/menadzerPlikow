@@ -49,9 +49,9 @@ public class Table extends Disc {
                 size = fileSize(file[i]);
                 date = lastModification.format(file[i].lastModified());
             }catch(Exception x){
-                //System.out.println("Exception detected in tableView strings: "+x.getMessage());
+                System.out.println("ERROR");
             }
-            data[i] = new Data(/*img,*/name,size,date);
+            data[i] = new Data(name,size,date);
         }
 
         list = FXCollections.observableArrayList(data);

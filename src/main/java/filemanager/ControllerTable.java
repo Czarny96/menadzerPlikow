@@ -80,23 +80,15 @@ public class ControllerTable implements Initializable {
     @FXML private void clickedObject(MouseEvent mouseEvent){
 
         if(mouseEvent.getClickCount() == 1){
-            //System.out.println("2clicked");
             objectName = tableView.getSelectionModel().getSelectedItem().getName();
-            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + objectName);
 
             objectPath = Disc.currentDirectoryPath +"\\"+ objectName;
-            System.out.println(objectPath);
-
             file = new File(objectPath);
         }
     }
     @FXML private void copy () {
-        //if(file.isFile()) checkSum = true;
         objectPathSource = objectPath;
         objectNameSource = objectName;
-//        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + objectNameSource);
-//        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" + objectPathSource);
-        //System.out.println("PRESS: COPY :::::::::::: " + objectPath);
     }
 
     Path sourceCopy;
@@ -126,9 +118,6 @@ public class ControllerTable implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//            File remove = new File(objectPath);
-//            remove.delete();
-
         refreshOject();
     }
 
@@ -155,7 +144,6 @@ Path sourceCreateFolder;
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Create new folder");
         dialog.setHeaderText("Enter folder name");
-        //dialog.setContentText("Enter folder name:");
 
         Optional<String> result = dialog.showAndWait();
         if (result.isPresent()){
@@ -166,13 +154,9 @@ Path sourceCreateFolder;
                 try {
                     Files.createDirectory(sourceCreateFolder);
                 } catch (IOException e) {
-                    System.out.println("NNNNNNNNNNNNNNNNNNNN");
+                    System.out.println("ERROR");
                 }
                 refreshOject();
         }
-
-
-
-
     }
 }
