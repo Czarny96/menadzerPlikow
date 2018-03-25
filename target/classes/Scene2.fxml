@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="filemanager.ControllerTable">
+   <children>
+      <TableView fx:id="tableView" layoutX="7.0" layoutY="41.0" onMouseClicked="#clickedObject" prefHeight="547.0" prefWidth="540.0" style="-fx-background-color: #EFEFEF;">
+         <columns>
+            <TableColumn fx:id="name" prefWidth="224.0" text="Name" />
+            <TableColumn fx:id="date" prefWidth="108.0" text="Date Modified" />
+            <TableColumn fx:id="size" prefWidth="85.0" text="Size" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnCopy" layoutX="7.0" layoutY="3.0" mnemonicParsing="false" onAction="#copy" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #A6A6A6;" text="Copy" textFill="WHITE" />
+      <Button fx:id="btnDelete" layoutX="117.0" layoutY="3.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #A6A6A6;" text="Delete" textFill="WHITE" />
+      <Button fx:id="btnOpen" layoutX="227.0" layoutY="3.0" mnemonicParsing="false" onAction="#open" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #A6A6A6;" text="Open" textFill="WHITE" />
+      <Button fx:id="btnPaste" layoutX="337.0" layoutY="3.0" mnemonicParsing="false" onAction="#paste" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #A6A6A6;" text="Paste" textFill="WHITE" />
+      <Button fx:id="btnCreateFolder" layoutX="447.0" layoutY="3.0" mnemonicParsing="false" onAction="#createFolder" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #A6A6A6;" text="Create Folder" textFill="WHITE" />
+   </children>
+</Pane>
